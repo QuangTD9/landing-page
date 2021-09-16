@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+body {
+  font-family: "Montserrat Regular";
+  background: #ffffff;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: hidden;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.app {
+  padding: 1rem 4rem;
+}

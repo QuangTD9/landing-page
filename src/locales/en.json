@@ -1,0 +1,19 @@
+{
+  "home": {
+    "labels": {
+      "gettingReady": "We’re Getting Ready",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minites",
+      "second": "Second"
+    },
+    "menu": {
+      "labels": {
+        "aboutUs": "About us",
+        "games": "Games",
+        "partners": "Partners",
+        "contactUs": "Contact us"
+      }
+    }
+  }
+}
