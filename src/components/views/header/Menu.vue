@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div class="items">
     <div>
       <a href="#" class="text-link">{{ $t("home.menu.labels.aboutUs") }}</a>
     </div>
@@ -23,7 +23,7 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-.menu {
+.items {
   display: flex;
   gap: 85px;
   .text-link {

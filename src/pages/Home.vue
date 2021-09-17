@@ -1,5 +1,5 @@
 <template>
-  <div>30 : 18</div>
+  <section>30 : 18</section>
 </template>
 
 <script lang="ts">

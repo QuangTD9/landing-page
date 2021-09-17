@@ -1,22 +1,27 @@
 <template>
-  <Banner />
-  <div class="header">
-    <img :src="Logo" alt="logo" />
-    <Menu />
-  </div>
+  <section class="header">
+    <div class="menu">
+      <img :src="Logo" alt="logo" />
+      <menu-header />
+    </div>
+    <banner />
+    <form-header />
+  </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import Menu from "../views/header/Menu.vue"
+import MenuHeader from "../views/header/Menu.vue"
 import Banner from "../views/header/Banner.vue"
+import FormHeader from "../views/header/FormHeader.vue"
 import { icons } from "../../assets/icons"
 
 export default defineComponent({
   name: "Header",
   components: {
-    Menu,
+    MenuHeader,
     Banner,
+    FormHeader,
   },
   setup() {
     const { Logo } = icons
@@ -27,9 +32,14 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .header {
+  min-height: 550px;
+  height: 100vh;
+}
+.menu {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: inherit;
   align-items: center;
+  padding: 1rem 4rem;
 }
 </style>
