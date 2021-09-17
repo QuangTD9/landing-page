@@ -1,34 +1,21 @@
 <template>
   <div class="banner">
-    <div class="bg-fairy">
-      <!-- <img :src="Fairy" alt="fairy" /> -->
-    </div>
-    <div class="bg-header">
-      <!-- <img :src="BackgroundHeader" alt="backfround header" /> -->
-    </div>
+    <div class="banner-fairy"></div>
+    <div class="banner-background"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { icons } from "@/assets/icons"
 import { defineComponent } from "vue"
 
 export default defineComponent({
   name: "Banner",
-  setup() {
-    const { BackgroundHeader, Fairy } = icons
-
-    return {
-      BackgroundHeader,
-      Fairy,
-    }
-  },
 })
 </script>
 
 <style lang="scss" scoped>
 .banner {
-  .bg-header {
+  &-background {
     background-image: url("../../../assets/icons/background-header.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +28,7 @@ export default defineComponent({
     z-index: -1;
   }
 
-  .bg-fairy {
+  &-fairy {
     background-image: url("../../../assets/icons/fairy.svg");
     background-repeat: no-repeat;
     background-size: cover;

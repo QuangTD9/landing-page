@@ -11,9 +11,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import MenuHeader from "../views/header/Menu.vue"
-import Banner from "../views/header/Banner.vue"
-import FormHeader from "../views/header/FormHeader.vue"
+import MenuHeader from "../blocked/header/Menu.vue"
+import Banner from "../blocked/header/Banner.vue"
+import FormHeader from "../blocked/header/FormHeader.vue"
 import { icons } from "../../assets/icons"
 
 export default defineComponent({
