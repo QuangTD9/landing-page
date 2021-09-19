@@ -59,3 +59,9 @@ p {
   color: #757575;
   line-height: 23px;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

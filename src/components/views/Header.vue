@@ -11,10 +11,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import MenuHeader from "../blocked/header/Menu.vue"
-import Banner from "../blocked/header/Banner.vue"
-import FormHeader from "../blocked/header/FormHeader.vue"
-import { icons } from "../../assets/icons"
+import MenuHeader from "../blocks/header/Menu.vue"
+import Banner from "../blocks/header/Banner.vue"
+import FormHeader from "../blocks/header/FormHeader.vue"
+import { logos } from "../../assets/logos"
 
 export default defineComponent({
   name: "Header",
@@ -24,7 +24,7 @@ export default defineComponent({
     FormHeader,
   },
   setup() {
-    const { Logo } = icons
+    const { Logo } = logos
 
     return { Logo }
   },

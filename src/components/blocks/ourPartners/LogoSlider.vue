@@ -1,0 +1,59 @@
+<template>
+  <div>
+    <swiper
+      :speed="1000"
+      :loop="true"
+      :autoplay="{
+        delay: 5000,
+        pauseOnMouseEnter: true,
+      }"
+      :slides-per-view="5"
+      :space-between="0"
+      :navigation="true"
+    >
+      <swiper-slide v-for="(item, index) in items" :key="index" :virtualIndex="index"><img :src="item" /></swiper-slide>
+    </swiper>
+  </div>
+</template>
+
+<script lang="ts">
+import { logos } from "@/assets/logos"
+import { defineComponent } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue"
+
+export default defineComponent({
+  name: "LogoSlider",
+  components: { Swiper, SwiperSlide },
+  setup() {
+    const { TwoK, BookPro, EAGames, FirstPowerUp, Game, Sega, WaltDisney } = logos
+
+    const items = [TwoK, BookPro, EAGames, FirstPowerUp, Game, Sega, WaltDisney]
+
+    return { items }
+  },
+})
+</script>
+<style lang="scss">
+.swiper-button-next {
+  background-image: url("../../../assets/icons/arrow-square-right.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-prev {
+  background-image: url("../../../assets/icons/arrow-square-left.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+</style>

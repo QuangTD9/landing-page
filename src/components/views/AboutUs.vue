@@ -8,24 +8,24 @@
       <p class="t-blue">135&#43;</p>
       <p class="t-title">{{ $t("home.aboutUs.labels.games") }}</p>
     </div>
-    <div class="block b-right">
-      <div class="b-right-item">
+    <div class="block block-right">
+      <div class="block-right-item">
         <img :src="CalendarTick" alt="" />
-        <div class="b-right-item-content">
+        <div class="block-right-item-content">
           <p class="t-title">{{ $t("home.aboutUs.labels.hour") }}</p>
           <span class="t-description">{{ $t("home.aboutUs.labels.hourDescription") }}</span>
         </div>
       </div>
-      <div class="b-right-item">
+      <div class="block-right-item">
         <img :src="Pentool" alt="" />
-        <div class="b-right-item-content">
+        <div class="block-right-item-content">
           <p class="t-title">{{ $t("home.aboutUs.labels.design") }}</p>
           <span class="t-description">{{ $t("home.aboutUs.labels.designDescription") }}</span>
         </div>
       </div>
-      <div class="b-right-item">
+      <div class="block-right-item">
         <img :src="People" alt="" />
-        <div class="b-right-item-content">
+        <div class="block-right-item-content">
           <p class="t-title">{{ $t("home.aboutUs.labels.team") }}</p>
           <span class="t-description">{{ $t("home.aboutUs.labels.teamDescription") }}</span>
         </div>
@@ -58,7 +58,6 @@ export default defineComponent({
   .block {
     max-width: 560px;
     font-family: "Montserrat Bold";
-    font-size: 14px;
 
     .pf-bold {
       margin-bottom: 20px;
@@ -78,7 +77,7 @@ export default defineComponent({
     }
   }
 
-  .b-right {
+  .block-right {
     background-color: #eeeeee;
     border: 1px solid #eeeeee;
     display: flex;
