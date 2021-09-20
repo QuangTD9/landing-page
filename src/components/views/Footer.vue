@@ -31,7 +31,7 @@
           <div class="block-content">
             <div class="block-content__item">
               <p class="t-description">{{ $t(`home.footer.labels.subscribeDescription`) }}</p>
-              <text-field :placeholder="$t('home.header.labels.enterYourEmail')" :icon="ArrowRightWhiteIcon" />
+              <text-field :placeholder="$t('home.footer.labels.yourEmail')" :icon="ArrowRightWhiteIcon" />
             </div>
           </div>
         </div>

@@ -69,7 +69,8 @@
         "phoneNumbers": "(+1) 555-0108-000 or (+236) 555-0108",
         "subscribe": "Subscribe",
         "subscribeDescription": "Subscribe to our newsletter and be the first to know about our updates",
-        "copyright": "2017 Copyright. Policy."
+        "copyright": "2017 Copyright. Policy.",
+        "yourEmail": "Enter your email"
       }
     }
   }

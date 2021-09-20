@@ -2,11 +2,15 @@
   <transition name="nav-mobile">
     <div class="navigation">
       <div class="navigation-top">
-        <!-- <select v-model="selected">
-        <option v-for="item in languages" :key="item.flag" :value="item.value" :style="{ backgroundImage: FlagVi }">
-          {{ item.title }}
-        </option>
-      </select> -->
+        <div>
+          <custom-select
+            :options="languages"
+            :default="'go'"
+            class="select"
+            :tabindex="tabindex"
+            @onChange="$emit('onChangeLanguage', $event)"
+          />
+        </div>
         <img @click="$emit('onClose')" :src="Close" alt="close" />
       </div>
       <ul class="navigation-bottom">
@@ -29,21 +33,26 @@
 
 <script lang="ts">
 import { icons } from "@/assets/icons"
-import { defineComponent, ref } from "vue"
+import { defineComponent } from "vue"
+import CustomSelect from "@/components/shared/Select.vue"
 
 export default defineComponent({
   name: "NavigationMobile",
-  emits: {
-    onClose: null,
+  emits: ["onClose", "onChangeLanguage"],
+  props: {
+    languages: {
+      type: Array,
+      required: true,
+    },
+    tabindex: {
+      type: Number,
+    },
   },
+  components: { CustomSelect },
   setup() {
-    const { Close, FlagVi, FlagEn } = icons
-    const languages = ref([
-      { flag: "us", language: "en", title: "English" },
-      { flag: "es", language: "vi", title: "Vietnamese" },
-    ])
+    const { Close } = icons
 
-    return { Close, languages, FlagVi, FlagEn }
+    return { Close }
   },
 })
 </script>
