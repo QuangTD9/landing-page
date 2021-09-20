@@ -3,9 +3,9 @@
     <div class="block">
       <p class="pf-bold">{{ $t("home.aboutUs.labels.aboutUs") }}</p>
       <span class="t-description">{{ $t("home.aboutUs.labels.aboutUsDescription") }}</span>
-      <p class="t-blue">600<span>M</span>&#43;</p>
+      <p class="t-title t-blue">600<span>M</span>&#43;</p>
       <p class="t-title">{{ $t("home.aboutUs.labels.users") }}</p>
-      <p class="t-blue">135&#43;</p>
+      <p class="t-title t-blue">135&#43;</p>
       <p class="t-title">{{ $t("home.aboutUs.labels.games") }}</p>
     </div>
     <div class="block block-right">
@@ -40,7 +40,6 @@ import { defineComponent } from "vue"
 
 export default defineComponent({
   name: "AboutUs",
-  components: {},
   setup() {
     const { CalendarTick, People, Pentool } = icons
 
@@ -57,13 +56,16 @@ export default defineComponent({
 
   .block {
     max-width: 560px;
-    font-family: "Montserrat Bold";
 
     .pf-bold {
       margin-bottom: 20px;
     }
 
-    .t-blue {
+    .t-title {
+      color: #000000;
+    }
+
+    .t-title.t-blue {
       margin-top: 70px;
       color: #079bee;
       font-size: 80px;
@@ -71,9 +73,6 @@ export default defineComponent({
       span {
         font-size: 50px;
       }
-    }
-    .t-title {
-      font-size: 24px;
     }
   }
 

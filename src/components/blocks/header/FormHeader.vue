@@ -6,22 +6,22 @@
       <div class="header-content-timer">
         <div class="header-content-timer-item">
           <p class="pf-bold">30</p>
-          <span>{{ $t("home.header.labels.days") }}</span>
+          <span class="t-title">{{ $t("home.header.labels.days") }}</span>
         </div>
         &#58;
         <div class="header-content-timer-item">
           <p class="pf-bold">18</p>
-          <span>{{ $t("home.header.labels.hours") }}</span>
+          <span class="t-title">{{ $t("home.header.labels.hours") }}</span>
         </div>
         &#58;
         <div class="header-content-timer-item">
           <p class="pf-bold">20</p>
-          <span>{{ $t("home.header.labels.minutes") }}</span>
+          <span class="t-title">{{ $t("home.header.labels.minutes") }}</span>
         </div>
         &#58;
         <div class="header-content-timer-item">
           <p class="pf-bold">11</p>
-          <span>{{ $t("home.header.labels.second") }}</span>
+          <span class="t-title">{{ $t("home.header.labels.second") }}</span>
         </div>
       </div>
     </div>
@@ -93,8 +93,9 @@ export default defineComponent({
       &-item {
         display: flex;
         flex-direction: column;
-        span {
-          font-family: "Montserrat Bold";
+
+        .t-title {
+          color: #000000;
           font-size: 16px;
           margin-top: 18px;
         }

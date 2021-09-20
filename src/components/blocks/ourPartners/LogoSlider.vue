@@ -11,7 +11,9 @@
       :space-between="0"
       :navigation="true"
     >
-      <swiper-slide v-for="(item, index) in items" :key="index" :virtualIndex="index"><img :src="item" /></swiper-slide>
+      <swiper-slide v-for="(slide, index) in sliders" :key="index" :virtualIndex="index"
+        ><img :src="slide"
+      /></swiper-slide>
     </swiper>
   </div>
 </template>
@@ -27,9 +29,9 @@ export default defineComponent({
   setup() {
     const { TwoK, BookPro, EAGames, FirstPowerUp, Game, Sega, WaltDisney } = logos
 
-    const items = [TwoK, BookPro, EAGames, FirstPowerUp, Game, Sega, WaltDisney]
+    const sliders = [TwoK, BookPro, EAGames, FirstPowerUp, Game, Sega, WaltDisney]
 
-    return { items }
+    return { sliders }
   },
 })
 </script>

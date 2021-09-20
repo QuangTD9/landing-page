@@ -60,8 +60,19 @@ p {
   line-height: 23px;
 }
 
+.t-title {
+  font-family: "Montserrat Bold";
+  font-size: 24px;
+  color: #ffffff;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+/* 
+img,
+svg {
+  width: 100%;
+} */

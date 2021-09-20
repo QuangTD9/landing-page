@@ -66,6 +66,9 @@ export default defineComponent({
     background: linear-gradient(180deg, rgba(0, 10, 255, 0.5) 0%, rgba(0, 0, 0, 0) 136.61%),
       linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("../../assets/icons/background-footer.svg");
     padding: 8rem 19rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 
     .container {
       display: flex;

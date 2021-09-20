@@ -1,16 +1,16 @@
 <template>
   <div class="items">
     <div>
-      <a href="#" class="t-link">{{ $t("home.header.menu.labels.aboutUs") }}</a>
+      <a href="#" class="t-title">{{ $t("home.header.menu.labels.aboutUs") }}</a>
     </div>
     <div>
-      <a href="#" class="t-link">{{ $t("home.header.menu.labels.games") }}</a>
+      <a href="#" class="t-title">{{ $t("home.header.menu.labels.games") }}</a>
     </div>
     <div>
-      <a href="#" class="t-link">{{ $t("home.header.menu.labels.partners") }}</a>
+      <a href="#" class="t-title">{{ $t("home.header.menu.labels.partners") }}</a>
     </div>
     <div>
-      <a href="#" class="t-link">{{ $t("home.header.menu.labels.contactUs") }}</a>
+      <a href="#" class="t-title">{{ $t("home.header.menu.labels.contactUs") }}</a>
     </div>
   </div>
 </template>
@@ -26,10 +26,7 @@ export default defineComponent({
 .items {
   display: flex;
   gap: 85px;
-  .t-link {
-    font-family: "Montserrat Bold";
-    font-weight: 700;
-    color: #ffffff;
+  .t-title {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 17.5px;
