@@ -60,7 +60,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .footer {
-  color: #ffffff;
+  color: var(--color-white);
 
   .top-foot {
     background: linear-gradient(180deg, rgba(0, 10, 255, 0.5) 0%, rgba(0, 0, 0, 0) 136.61%),
@@ -101,11 +101,11 @@ export default defineComponent({
 
             &::v-deep input {
               background-color: transparent;
-              border: 1px solid #ffffff;
-              color: #ffffff;
+              border: 1px solid var(--color-white);
+              color: var(--color-white);
 
               &::placeholder {
-                color: #ffffff;
+                color: var(--color-white);
               }
             }
           }
@@ -114,13 +114,13 @@ export default defineComponent({
     }
 
     .t-description {
-      color: #ffffff;
+      color: var(--color-white);
     }
   }
 
   .bottom-foot {
     height: 80px;
-    background-color: #000000;
+    background-color: var(--color-black);
     display: flex;
     align-items: center;
 

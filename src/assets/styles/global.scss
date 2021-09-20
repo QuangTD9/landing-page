@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+@import "variables.scss";
 
 @font-face {
   font-family: "Montserrat Bold";
@@ -16,15 +17,32 @@
   src: url(../fonts/PlayfairDisplay-ExtraBold.ttf);
 }
 
+:root {
+  // color
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-blue: #079bee;
+  --color-grey: #757575;
+  // size
+  --size-shape-radius: 4px;
+  // font
+  --font-mentserrat-regular: "Montserrat Regular";
+  --font-mentserrat-bold: "Montserrat Bold";
+  --font-playfair-bold: "Playfair Display";
+  // speed
+  --speed-switch-animation: 5000ms;
+  --speed-card-animation: 1000ms;
+}
+
 body {
-  font-family: "Montserrat Regular";
+  font-family: var(--font-mentserrat-regular);
   box-sizing: border-box;
   width: 100vw;
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #000000;
-  background: #ffffff;
+  color: var(--color-black);
+  background: var(--color-white);
   overflow-x: hidden;
 }
 
@@ -48,22 +66,22 @@ p {
 }
 
 .pf-bold {
-  font-family: "Playfair Display";
-  font-size: 60px;
+  font-family: var(--font-playfair-bold);
+  font-size: $FontSizeXL;
   letter-spacing: 3.6px;
 }
 
 .t-description {
-  font-family: "Montserrat Regular";
-  font-size: 14px;
-  color: #757575;
+  font-family: var(--font-mentserrat-regular);
+  font-size: $FontSizeXS;
+  color: var(--color-grey);
   line-height: 23px;
 }
 
 .t-title {
-  font-family: "Montserrat Bold";
-  font-size: 24px;
-  color: #ffffff;
+  font-family: var(--font-mentserrat-bold);
+  font-size: $FontSizeM;
+  color: var(--color-white);
 }
 
 ul {

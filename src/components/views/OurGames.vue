@@ -101,7 +101,7 @@ export default defineComponent({
 
       .t-description {
         align-items: flex-end;
-        color: #ffffff;
+        color: var(--color-white);
       }
     }
 
@@ -118,7 +118,7 @@ export default defineComponent({
 
       .card-image {
         transform: scale(0.9);
-        transition: all 1s ease-in-out;
+        transition: all var(--speed-card-animation) ease-in-out;
       }
       .card-image::before {
         content: "";

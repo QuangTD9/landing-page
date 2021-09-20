@@ -19,7 +19,7 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@keyframes example {
+@keyframes animation {
   0%,
   100% {
     top: 0;
@@ -33,12 +33,12 @@ export default defineComponent({
   align-items: center;
   position: relative;
   height: 57vw;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60.6%, #ffffff 82.58%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60.6%, var(--color-white) 82.58%);
 
   &-witch {
     width: 30%;
     right: 36%;
-    animation: example 5s infinite;
+    animation: animation var(--speed-switch-animation) infinite;
     position: absolute;
   }
 

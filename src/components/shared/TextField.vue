@@ -32,7 +32,7 @@ export default defineComponent({
     border-radius: 8px;
     padding: 0 14px;
     width: 100%;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--color-white);
 
     &:focus-visible {
       outline: none;

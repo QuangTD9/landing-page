@@ -62,12 +62,12 @@ export default defineComponent({
     }
 
     .t-title {
-      color: #000000;
+      color: var(--color-black);
     }
 
     .t-title.t-blue {
       margin-top: 70px;
-      color: #079bee;
+      color: var(--color-blue);
       font-size: 80px;
 
       span {

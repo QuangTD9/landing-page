@@ -1,39 +1,41 @@
 <template>
-  <view-header></view-header>
+  <block-header></block-header>
   <view-about-us></view-about-us>
   <view-witch-pin></view-witch-pin>
   <view-our-games></view-our-games>
   <view-our-partners></view-our-partners>
-  <view-footer></view-footer>
-  <view-scroll-back></view-scroll-back>
+  <block-footer></block-footer>
+  <block-scroll-back></block-scroll-back>
 </template>
 
 <script lang="ts">
-import "@/assets/styles/global.css"
+// styles
+import "@/assets/styles/global.scss"
 import "swiper/swiper.scss"
 import "swiper/components/navigation/navigation.scss"
 import "swiper/components/pagination/pagination.scss"
+// components
 import SwiperCore, { Navigation, Autoplay } from "swiper"
 import { defineComponent } from "vue"
-import ViewHeader from "@/components/views/Header.vue"
+import BlockHeader from "@/components/blocks/Header.vue"
 import ViewAboutUs from "@/components/views/AboutUs.vue"
-import ViewScrollBack from "@/components/views/SrcollBack.vue"
+import BlockScrollBack from "@/components/blocks/SrcollBack.vue"
 import ViewWitchPin from "@/components/views/WitchPin.vue"
 import ViewOurPartners from "@/components/views/OurPartners.vue"
-import ViewFooter from "@/components/views/Footer.vue"
 import ViewOurGames from "@/components/views/OurGames.vue"
+import BlockFooter from "@/components/blocks/Footer.vue"
 
 SwiperCore.use([Navigation, Autoplay])
 
 export default defineComponent({
   name: "App",
   components: {
-    ViewHeader,
+    BlockHeader,
     ViewAboutUs,
-    ViewScrollBack,
+    BlockScrollBack,
     ViewWitchPin,
     ViewOurPartners,
-    ViewFooter,
+    BlockFooter,
     ViewOurGames,
   },
 })
