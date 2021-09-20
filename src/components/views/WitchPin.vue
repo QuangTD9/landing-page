@@ -19,6 +19,9 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
+
 @keyframes animation {
   0%,
   100% {
@@ -29,14 +32,14 @@ export default defineComponent({
   }
 }
 .pin {
-  margin-top: 10rem;
+  margin-top: 3rem;
   align-items: center;
   position: relative;
   height: 57vw;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60.6%, var(--color-white) 82.58%);
 
   &-witch {
-    width: 30%;
+    width: 35%;
     right: 36%;
     animation: animation var(--speed-switch-animation) infinite;
     position: absolute;
@@ -47,6 +50,14 @@ export default defineComponent({
     position: absolute;
     bottom: 0;
     z-index: -1;
+  }
+
+  @include responsive(tablet) {
+    height: 67vw;
+    &-witch {
+      width: 45%;
+      right: 28%;
+    }
   }
 }
 </style>

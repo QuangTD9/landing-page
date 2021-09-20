@@ -65,6 +65,9 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
+
 .our-games {
   padding: 0 4rem;
   display: flex;
@@ -102,6 +105,7 @@ export default defineComponent({
       .t-description {
         align-items: flex-end;
         color: var(--color-white);
+        text-align: left;
       }
     }
 
@@ -141,23 +145,39 @@ export default defineComponent({
       }
     }
   }
-}
 
-@media only screen and (max-width: 1024px) {
-  .container {
-    padding: 0 2rem;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, auto);
+  @include responsive(desktop) {
+    padding: 0 $SpacingL;
+    .container {
+      padding: 0;
+      grid-gap: 0.1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, auto);
 
-    &__item:nth-child(n + 4):nth-child(-n + 6),
-    &__item:nth-child(n + 10):nth-child(-n + 12) {
-      height: 100%;
-    }
-    &__item:nth-child(n + 7):nth-child(-n + 12) {
-      height: calc(100% + 30px);
-      display: flex;
-      align-items: flex-end;
+      &__item:nth-child(n + 4):nth-child(-n + 6),
+      &__item:nth-child(n + 10):nth-child(-n + 12) {
+        height: 100%;
+      }
+      &__item:nth-child(n + 7):nth-child(-n + 12) {
+        height: calc(100% + 30px);
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .card-text {
+        padding: $SpacingS;
+        bottom: 0;
+
+        .t-title {
+          font-size: $FontSizeM;
+          margin-bottom: $SpacingS;
+        }
+
+        // .t-description {
+        //   align-items: flex-end;
+        //   color: var(--color-white);
+        // }
+      }
     }
   }
 }

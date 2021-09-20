@@ -3,10 +3,16 @@
     <div class="block">
       <p class="pf-bold">{{ $t("home.aboutUs.labels.aboutUs") }}</p>
       <span class="t-description">{{ $t("home.aboutUs.labels.aboutUsDescription") }}</span>
-      <p class="t-title t-blue">600<span>M</span>&#43;</p>
-      <p class="t-title">{{ $t("home.aboutUs.labels.users") }}</p>
-      <p class="t-title t-blue">135&#43;</p>
-      <p class="t-title">{{ $t("home.aboutUs.labels.games") }}</p>
+      <div class="block-count">
+        <div class="block-count-item">
+          <p class="t-title t-blue">600<span>M</span>&#43;</p>
+          <p class="t-title">{{ $t("home.aboutUs.labels.users") }}</p>
+        </div>
+        <div class="block-count-item">
+          <p class="t-title t-blue">135&#43;</p>
+          <p class="t-title">{{ $t("home.aboutUs.labels.games") }}</p>
+        </div>
+      </div>
     </div>
     <div class="block block-right">
       <div class="block-right-item">
@@ -48,11 +54,15 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
+
 .about-us {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-top: 50px;
+  padding: 0 $SpacingXL;
 
   .block {
     max-width: 560px;
@@ -65,7 +75,7 @@ export default defineComponent({
       color: var(--color-black);
     }
 
-    .t-title.t-blue {
+    .t-blue {
       margin-top: 70px;
       color: var(--color-blue);
       font-size: 80px;
@@ -77,8 +87,8 @@ export default defineComponent({
   }
 
   .block-right {
-    background-color: #eeeeee;
-    border: 1px solid #eeeeee;
+    background-color: var(--color-neutral);
+    border: 1px solid var(--color-neutral);
     display: flex;
     flex-direction: column;
     gap: 41px;
@@ -96,6 +106,31 @@ export default defineComponent({
         flex-direction: column;
         gap: 10px;
       }
+    }
+  }
+
+  @include responsive(desktop) {
+    flex-direction: column;
+    padding: $SpacingL;
+    .block {
+      padding: 0 $SpacingL;
+      max-width: none;
+
+      .block-count {
+        display: flex;
+        justify-content: space-around;
+        margin: $FontSizeM 0;
+      }
+      .t-blue {
+        font-size: 44px;
+        margin-top: 0;
+        span {
+          font-size: $SpacingLX;
+        }
+      }
+    }
+    .block-right {
+      padding: $SpacingXL $SpacingM;
     }
   }
 }

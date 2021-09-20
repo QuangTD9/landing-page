@@ -13,6 +13,10 @@ import TwitterIcon from "./icons/twitter-icon.svg"
 import FacebookIcon from "./icons/facebook-icon.svg"
 import Mobile from "./icons/mobile.svg"
 import Location from "./icons/location.svg"
+import Menu from "./icons/menu.svg"
+import Close from "./icons/close.svg"
+import FlagVi from "./icons/flag-vi.svg"
+import FlagEn from "./icons/flag-en.svg"
 
 export const icons = {
   ArrowRightWhiteIcon,
@@ -30,4 +34,8 @@ export const icons = {
   FacebookIcon,
   Mobile,
   Location,
+  Menu,
+  Close,
+  FlagVi,
+  FlagEn,
 }

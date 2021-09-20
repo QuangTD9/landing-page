@@ -1,4 +1,8 @@
 {
+  "locales": {
+    "vi": "Vietnamese",
+    "en": "English"
+  },
   "home": {
     "header": {
       "labels": {

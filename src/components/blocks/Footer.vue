@@ -59,6 +59,8 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
 .footer {
   color: var(--color-white);
 
@@ -129,6 +131,17 @@ export default defineComponent({
       line-height: 126%;
       text-align: center;
       width: 100%;
+    }
+  }
+
+  @include responsive(desktop) {
+    .top-foot {
+      padding: 4rem $SpacingL;
+      .container {
+        align-items: center;
+        flex-direction: column;
+        gap: 4rem;
+      }
     }
   }
 }

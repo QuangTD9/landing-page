@@ -7,9 +7,22 @@
         delay: 5000,
         pauseOnMouseEnter: true,
       }"
-      :slides-per-view="5"
       :space-between="0"
       :navigation="true"
+      :breakpoints="{
+        380: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1580: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+      }"
     >
       <swiper-slide v-for="(slide, index) in sliders" :key="index" :virtualIndex="index"
         ><img :src="slide"
@@ -37,14 +50,14 @@ export default defineComponent({
 </script>
 <style lang="scss">
 .swiper-button-next {
-  background-image: url("../../../assets/icons/arrow-square-right.svg");
+  background-image: url("../../assets/icons/arrow-square-right.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
 }
 
 .swiper-button-prev {
-  background-image: url("../../../assets/icons/arrow-square-left.svg");
+  background-image: url("../../assets/icons/arrow-square-left.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;

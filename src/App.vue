@@ -1,10 +1,10 @@
 <template>
   <block-header></block-header>
-  <view-about-us></view-about-us>
+  <view-about-us id="about-us"></view-about-us>
   <view-witch-pin></view-witch-pin>
-  <view-our-games></view-our-games>
-  <view-our-partners></view-our-partners>
-  <block-footer></block-footer>
+  <view-our-games id="our-games"></view-our-games>
+  <view-our-partners id="our-partners"></view-our-partners>
+  <block-footer id="footer"></block-footer>
   <block-scroll-back></block-scroll-back>
 </template>
 
