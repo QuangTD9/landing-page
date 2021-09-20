@@ -83,6 +83,7 @@ export default defineComponent({
   font-family: var(--font-mentserrat-bold);
   font-size: 14px;
   box-sizing: border-box;
+  overflow: auto;
 
   ul {
     margin-top: $SpacingL;
