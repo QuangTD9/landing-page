@@ -1,33 +1,35 @@
 <template>
-  <div class="navigation">
-    <div class="navigation-top">
-      <!-- <select v-model="selected">
+  <transition name="nav-mobile">
+    <div class="navigation">
+      <div class="navigation-top">
+        <!-- <select v-model="selected">
         <option v-for="item in languages" :key="item.flag" :value="item.value" :style="{ backgroundImage: FlagVi }">
           {{ item.title }}
         </option>
       </select> -->
-      <img @click="$emit('onClose')" :src="Close" alt="close" />
+        <img @click="$emit('onClose')" :src="Close" alt="close" />
+      </div>
+      <ul class="navigation-bottom">
+        <li>
+          <a @click="$emit('onClose')" href="#about-us">{{ $t("home.header.menu.labels.aboutUs") }}</a>
+        </li>
+        <li>
+          <a @click="$emit('onClose')" href="#our-games">{{ $t("home.header.menu.labels.games") }}</a>
+        </li>
+        <li>
+          <a @click="$emit('onClose')" href="#our-partners">{{ $t("home.header.menu.labels.partners") }}</a>
+        </li>
+        <li>
+          <a @click="$emit('onClose')" href="#footer">{{ $t("home.header.menu.labels.contactUs") }}</a>
+        </li>
+      </ul>
     </div>
-    <ul class="navigation-bottom">
-      <li>
-        <a @click="$emit('onClose')" href="#about-us">{{ $t("home.header.menu.labels.aboutUs") }}</a>
-      </li>
-      <li>
-        <a @click="$emit('onClose')" href="#our-games">{{ $t("home.header.menu.labels.games") }}</a>
-      </li>
-      <li>
-        <a @click="$emit('onClose')" href="#our-partners">{{ $t("home.header.menu.labels.partners") }}</a>
-      </li>
-      <li>
-        <a @click="$emit('onClose')" href="#footer">{{ $t("home.header.menu.labels.contactUs") }}</a>
-      </li>
-    </ul>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts">
 import { icons } from "@/assets/icons"
-import { defineComponent, PropType, ref } from "vue"
+import { defineComponent, ref } from "vue"
 
 export default defineComponent({
   name: "NavigationMobile",
@@ -47,7 +49,19 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import "../../assets/styles/variables.scss";
+.nav-mobile-enter-active,
+.nav-mobile-leave-active {
+  transition: 0.7s ease all;
+}
 
+.nav-mobile-enter-from,
+.nav-mobile-leave-to {
+  transform: translateY(-100%);
+}
+
+.nav-mobile-enter-to {
+  transform: translateY(0);
+}
 .navigation {
   position: fixed;
   top: 0;

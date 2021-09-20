@@ -1,6 +1,6 @@
 <template>
   <section class="our-partners">
-    <p class="pf-bold">Our Partners</p>
+    <p class="pf-bold">{{ $t("home.ourPartners.labels.ourPartners") }}</p>
     <logo-slider></logo-slider>
   </section>
 </template>

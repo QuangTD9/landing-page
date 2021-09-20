@@ -1,20 +1,17 @@
 <template>
   <section class="our-games">
-    <p class="pf-bold">Our Games</p>
+    <p class="pf-bold">{{ $t(`home.ourGames.labels.ourGames`) }}</p>
     <p class="t-description">
-      As a pioneer of mobile app gamification, we take pride in originality and individuality, providing global players
-      with state-of-the-art games that feature splendid storylines, sensational sound effects and magnificent animation
-      that never cease to impress.
+      {{ $t(`home.ourGames.labels.ourGamesDescription`) }}
     </p>
     <div class="container">
       <div v-for="(image, index) in gridImages" :key="index" class="container__item">
         <div class="card-image">
           <img :src="image" />
           <div class="card-text">
-            <p class="t-title">E-Space</p>
+            <p class="t-title">{{ $t(`home.ourGames.labels.textTitle${index}`) }}</p>
             <span class="t-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
+              {{ $t(`home.ourGames.labels.textDescription`) }}
             </span>
           </div>
         </div>
@@ -165,7 +162,7 @@ export default defineComponent({
       }
 
       .card-text {
-        padding: $SpacingS;
+        padding: $SpacingM;
         bottom: 0;
 
         .t-title {
