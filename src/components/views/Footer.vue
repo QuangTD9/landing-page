@@ -11,33 +11,35 @@
           </ul>
         </div>
         <div class="container__block">
-          <p class="t-title">Address</p>
+          <p class="t-title">{{ $t(`home.footer.labels.address`) }}</p>
           <div class="block-content">
             <img :src="Location" alt="" />
             <div class="block-content__item">
-              <p class="t-description">Valletta Buildings, South Street, Valletta - VLT 1103 Malta, Mỹ</p>
-              <p class="t-description">20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</p>
+              <p class="t-description">{{ $t(`home.footer.labels.addressLocation1`) }}</p>
+              <p class="t-description">{{ $t(`home.footer.labels.addressLocation2`) }}</p>
             </div>
           </div>
           <div class="block-content">
             <img :src="Mobile" alt="" />
             <div class="block-content__item">
-              <p class="t-description">(+1) 555-0108-000 or (+236) 555-0108</p>
+              <p class="t-description">{{ $t(`home.footer.labels.phoneNumbers`) }}</p>
             </div>
           </div>
         </div>
         <div class="container__block">
-          <p class="t-title">Subscribe</p>
+          <p class="t-title">{{ $t(`home.footer.labels.subscribe`) }}</p>
           <div class="block-content">
             <div class="block-content__item">
-              <p class="t-description">Subscribe to our newsletter and be the first to know about our updates</p>
+              <p class="t-description">{{ $t(`home.footer.labels.subscribeDescription`) }}</p>
               <text-field :placeholder="$t('home.header.labels.enterYourEmail')" :icon="ArrowRightWhiteIcon" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="bottom-foot"><p>2017 Copyright. Policy.</p></div>
+    <div class="bottom-foot">
+      <p>{{ $t(`home.footer.labels.copyright`) }}</p>
+    </div>
   </section>
 </template>
 

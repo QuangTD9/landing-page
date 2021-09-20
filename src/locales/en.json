@@ -36,6 +36,41 @@
         "team": "Team",
         "teamDescription": "Etech is an award-winning, international studio of designers, artists, animators and producers that create content for the biggest names in film and video games."
       }
+    },
+    "ourGames": {
+      "labels": {
+        "ourGames": "Our Games",
+        "ourGamesDescription": "As a pioneer of mobile app gamification, we take pride in originality and individuality, providing global players with state-of-the-art games that feature splendid storylines, sensational sound effects and magnificent animation that never cease to impress.",
+        "textTitle0": "E-Space",
+        "textTitle1": "Pirates",
+        "textTitle2": "Magic tree",
+        "textTitle3": "Kingland",
+        "textTitle4": "Witch Party",
+        "textTitle5": "Aborigines",
+        "textTitle6": "The Last Game",
+        "textTitle7": "Rocky",
+        "textTitle8": "Cinderella",
+        "textTitle9": "G-Dragon",
+        "textTitle10": "Blue Fire",
+        "textTitle11": "Egypt Game",
+        "textDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    },
+    "ourPartners": {
+      "labels": {
+        "ourPartners": "Our Partners"
+      }
+    },
+    "footer": {
+      "labels": {
+        "address": "Address",
+        "addressLocation1": "Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US",
+        "addressLocation2": "20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam",
+        "phoneNumbers": "(+1) 555-0108-000 or (+236) 555-0108",
+        "subscribe": "Subscribe",
+        "subscribeDescription": "Subscribe to our newsletter and be the first to know about our updates",
+        "copyright": "2017 Copyright. Policy."
+      }
     }
   }
 }

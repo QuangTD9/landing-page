@@ -32,6 +32,7 @@
         <text-field :placeholder="$t('home.header.labels.enterYourEmail')" />
       </div>
     </div>
+    <div class="blur"></div>
     <img class="fairy" :src="Fairy" alt="fairy" />
   </section>
 </template>

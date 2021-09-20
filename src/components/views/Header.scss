@@ -3,10 +3,29 @@
 
 .header {
   position: relative;
+  h1 {
+    z-index: 3;
+  }
   .fairy {
     position: absolute;
     top: 0;
     height: 100%;
+  }
+  .blur {
+    position: absolute;
+    height: 52%;
+    width: 61%;
+    top: 39%;
+    left: 21%;
+    background: radial-gradient(
+      66.72% 27.79% at 50.81% 69.15%,
+      #210544 0,
+      rgba(23, 5, 68, 0.71) 50.52%,
+      rgba(23, 5, 68, 0) 100%
+    );
+    backdrop-filter: blur(2px);
+    z-index: 2;
+    border-radius: 50%;
   }
   .header-container {
     min-height: 70vh;
@@ -40,7 +59,7 @@
       font-size: $FontSizeXL;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
       margin-bottom: 80px;
-      z-index: 1;
+      z-index: 3;
 
       &-item {
         display: flex;
@@ -59,7 +78,7 @@
       gap: $SpacingS;
       flex-direction: column;
       max-width: 488px;
-      z-index: 1;
+      z-index: 3;
 
       p {
         font-size: 18px;
@@ -125,6 +144,19 @@
       margin-top: -36%;
       width: 80%;
       margin-left: 20%;
+    }
+
+    .blur {
+      border-radius: 0;
+      width: 100%;
+      top: 10%;
+      left: 0;
+    }
+  }
+
+  @include responsive(tablet) {
+    .blur {
+      top: 18%;
     }
   }
 }
