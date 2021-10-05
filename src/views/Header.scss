@@ -1,5 +1,5 @@
-@import "../../assets/styles/variables.scss";
-@import "../../assets/styles/mixins.scss";
+@import "../assets/styles/variables.scss";
+@import "../assets/styles/mixins.scss";
 
 .header {
   position: relative;
@@ -31,7 +31,7 @@
     min-height: 70vh;
     height: 100vh;
 
-    background-image: url("../../assets/icons/background-header.svg");
+    background-image: url("../assets/icons/background-header.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;

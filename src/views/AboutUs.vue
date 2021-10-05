@@ -54,8 +54,8 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import "../../assets/styles/mixins.scss";
-@import "../../assets/styles/variables.scss";
+@import "../assets/styles/mixins.scss";
+@import "../assets/styles/variables.scss";
 
 .about-us {
   display: flex;

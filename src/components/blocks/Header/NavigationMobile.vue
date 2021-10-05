@@ -28,7 +28,7 @@
 <script lang="ts">
 import { icons } from "@/assets/icons"
 import { defineComponent } from "vue"
-import LanguageDropdown from "@/components/blocks/LanguageDropdown.vue"
+import LanguageDropdown from "@/components/blocks/Header/LanguageDropdown.vue"
 
 export default defineComponent({
   name: "NavigationMobile",
@@ -42,7 +42,7 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import "../../assets/styles/variables.scss";
+@import "../../../assets/styles/variables.scss";
 .nav-mobile-enter-active,
 .nav-mobile-leave-active {
   transition: 0.7s ease all;

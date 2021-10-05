@@ -26,8 +26,8 @@
 <script lang="ts">
 import { icons } from "@/assets/icons"
 import { defineComponent, onMounted, onUnmounted, ref } from "vue"
-import NavigationMobile from "@/components/blocks/NavigationMobile.vue"
-import LanguageDropdown from "@/components/blocks/LanguageDropdown.vue"
+import NavigationMobile from "@/components/blocks/Header/NavigationMobile.vue"
+import LanguageDropdown from "@/components/blocks/Header/LanguageDropdown.vue"
 
 export default defineComponent({
   name: "Menu",

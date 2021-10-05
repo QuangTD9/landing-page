@@ -50,14 +50,14 @@ export default defineComponent({
 </script>
 <style lang="scss">
 .swiper-button-next {
-  background-image: url("../../assets/icons/arrow-square-right.svg");
+  background-image: url("../../../assets/icons/arrow-square-right.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
 }
 
 .swiper-button-prev {
-  background-image: url("../../assets/icons/arrow-square-left.svg");
+  background-image: url("../../../assets/icons/arrow-square-left.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;

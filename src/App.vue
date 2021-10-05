@@ -17,13 +17,13 @@ import "swiper/components/pagination/pagination.scss"
 // components
 import SwiperCore, { Navigation, Autoplay } from "swiper"
 import { defineComponent } from "vue"
-import ViewHeader from "@/components/views/Header.vue"
-import ViewAboutUs from "@/components/views/AboutUs.vue"
+import ViewHeader from "@/views/Header.vue"
+import ViewAboutUs from "@/views/AboutUs.vue"
 import BlockScrollBack from "@/components/blocks/SrcollBack.vue"
-import ViewWitchPin from "@/components/views/WitchPin.vue"
-import ViewOurPartners from "@/components/views/OurPartners.vue"
-import ViewOurGames from "@/components/views/OurGames.vue"
-import ViewFooter from "@/components/views/Footer.vue"
+import ViewWitchPin from "@/views/WitchPin.vue"
+import ViewOurPartners from "@/views/OurPartners.vue"
+import ViewOurGames from "@/views/OurGames.vue"
+import ViewFooter from "@/views/Footer.vue"
 
 SwiperCore.use([Navigation, Autoplay])
 

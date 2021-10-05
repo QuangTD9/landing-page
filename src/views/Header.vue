@@ -39,9 +39,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import MenuHeader from "@/components/blocks/Menu.vue"
+import MenuHeader from "@/components/blocks/Header/Menu.vue"
 import TextField from "@/components/shared/TextField.vue"
-import { logos } from "../../assets/logos"
+import { logos } from "../assets/logos"
 import { icons } from "@/assets/icons"
 
 export default defineComponent({

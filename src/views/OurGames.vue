@@ -62,8 +62,8 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import "../../assets/styles/mixins.scss";
-@import "../../assets/styles/variables.scss";
+@import "../assets/styles/mixins.scss";
+@import "../assets/styles/variables.scss";
 
 .our-games {
   padding: 0 4rem;

@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { icons } from "@/assets/icons"
-import LogoSlider from "@/components/blocks/LogoSlider.vue"
+import LogoSlider from "@/components/blocks/OurGames/LogoSlider.vue"
 import { defineComponent } from "vue"
 
 export default defineComponent({
@@ -21,8 +21,8 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import "../../assets/styles/mixins.scss";
-@import "../../assets/styles/variables.scss";
+@import "../assets/styles/mixins.scss";
+@import "../assets/styles/variables.scss";
 
 .our-partners {
   padding: 5rem 15rem;
