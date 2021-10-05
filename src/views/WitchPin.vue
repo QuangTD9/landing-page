@@ -1,20 +1,20 @@
 <template>
   <section class="pin">
-    <img class="pin-witch" :src="Wich" alt="" />
+    <img class="pin-witch" :src="Witch" alt="" />
     <img class="pin-map" :src="PinMap" alt="" />
   </section>
 </template>
 
 <script lang="ts">
-import { icons } from "@/assets/icons"
+import { images } from "@/assets/images"
 import { defineComponent } from "vue"
 
 export default defineComponent({
   name: "Pin",
   setup() {
-    const { Wich, PinMap } = icons
+    const { Witch, PinMap } = images
 
-    return { Wich, PinMap }
+    return { Witch, PinMap }
   },
 })
 </script>

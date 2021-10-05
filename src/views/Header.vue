@@ -42,7 +42,7 @@ import { defineComponent } from "vue"
 import MenuHeader from "@/components/blocks/Header/Menu.vue"
 import TextField from "@/components/shared/TextField.vue"
 import { logos } from "../assets/logos"
-import { icons } from "@/assets/icons"
+import { images } from "@/assets/images"
 
 export default defineComponent({
   name: "Header",
@@ -52,7 +52,7 @@ export default defineComponent({
   },
   setup() {
     const { Logo } = logos
-    const { Fairy } = icons
+    const { Fairy } = images
 
     return { Logo, Fairy }
   },

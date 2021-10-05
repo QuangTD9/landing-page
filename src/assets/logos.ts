@@ -1,11 +1,11 @@
-import Logo from "./logos/logo.svg"
-import TwoK from "./logos/two-k.svg"
-import BookPro from "./logos/book-pro.svg"
-import EAGames from "./logos/ea-games.svg"
-import FirstPowerUp from "./logos/first-power-up.svg"
-import Game from "./logos/game.svg"
-import Sega from "./logos/sega.svg"
-import WaltDisney from "./logos/walt-disney.svg"
+import Logo from "./logos/logo.png"
+import TwoK from "./logos/two-k.png"
+import BookPro from "./logos/book-pro.png"
+import EAGames from "./logos/ea-games.png"
+import FirstPowerUp from "./logos/first-power-up.png"
+import Game from "./logos/game.png"
+import Sega from "./logos/sega.png"
+import WaltDisney from "./logos/walt-disney.png"
 
 export const logos = {
   Logo,
