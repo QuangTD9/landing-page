@@ -3,13 +3,7 @@
     <div class="navigation">
       <div class="navigation-top">
         <div>
-          <custom-select
-            :options="languages"
-            :default="'go'"
-            class="select"
-            :tabindex="tabindex"
-            @onChange="$emit('onChangeLanguage', $event)"
-          />
+          <language-dropdown class="select" />
         </div>
         <img @click="$emit('onClose')" :src="Close" alt="close" />
       </div>
@@ -34,21 +28,12 @@
 <script lang="ts">
 import { icons } from "@/assets/icons"
 import { defineComponent } from "vue"
-import CustomSelect from "@/components/shared/Select.vue"
+import LanguageDropdown from "@/components/blocks/LanguageDropdown.vue"
 
 export default defineComponent({
   name: "NavigationMobile",
-  emits: ["onClose", "onChangeLanguage"],
-  props: {
-    languages: {
-      type: Array,
-      required: true,
-    },
-    tabindex: {
-      type: Number,
-    },
-  },
-  components: { CustomSelect },
+  emits: ["onClose"],
+  components: { LanguageDropdown },
   setup() {
     const { Close } = icons
 
@@ -71,6 +56,7 @@ export default defineComponent({
 .nav-mobile-enter-to {
   transform: translateY(0);
 }
+
 .navigation {
   position: fixed;
   top: 0;

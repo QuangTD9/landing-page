@@ -4,42 +4,43 @@
       <img :src="selected.flag" alt="" />
     </div>
     <div class="items" :class="{ selectHide: !open }">
-      <div class="item" v-for="(option, i) in options" :key="i" @click="handleSelect(option, i)">
-        <span v-if="tabindex === i">&#10003;</span> <img :src="option.flag" alt="" />
-        <p>{{ $t(`locales.${option.language}`) }}</p>
+      <div class="item" v-for="(option, i) in options" :key="i" @click="handleChangeLocale(option, i)">
+        <span :class="selected.language === option.language ? 'visible' : 'invisible'"
+          ><img :src="Checked" alt="checked" class="checked"
+        /></span>
+        <img :src="option.flag" alt="" />
+        <p class="language">{{ $t(`locales.${option.language}`) }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import { icons } from "@/assets/icons"
+import { i18n } from "@/i18n"
+import { OptionLanguage } from "@/types/OptionLanguage"
 import { defineComponent, ref } from "vue"
 
 export default defineComponent({
-  name: "TextField",
-  props: {
-    options: {
-      type: Array,
-      required: true,
-    },
-    tabindex: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-  },
-  emits: ["onChange"],
-  setup(props, { emit }) {
-    const selected = ref(props.options.length > 0 ? props.options[0] : null)
+  name: "LanguageDropdown",
+  setup() {
+    const { Checked, FlagEn, FlagVi } = icons
+    const options: OptionLanguage[] = [
+      { flag: FlagEn, language: "en" },
+      { flag: FlagVi, language: "vi" },
+    ]
+    const selected = ref<OptionLanguage | undefined>(options.find((item) => item.language === i18n.global.locale))
+    const tabindex = ref(i18n.global.locale === "en" ? 0 : 1)
     const open = ref(false)
 
-    const handleSelect = (option: any, index: number) => {
-      selected.value = option
+    const handleChangeLocale = (option: OptionLanguage, tabIndex: number) => {
+      i18n.global.locale = option.language
       open.value = false
-      emit("onChange", [option.language, index])
+      selected.value = option
+      tabindex.value = tabIndex
     }
 
-    return { selected, open, handleSelect }
+    return { Checked, options, selected, tabindex, open, handleChangeLocale }
   },
 })
 </script>
@@ -51,7 +52,6 @@ export default defineComponent({
   text-align: left;
   outline: none;
   height: 47px;
-  line-height: 47px;
 }
 
 .selected {
@@ -94,34 +94,35 @@ export default defineComponent({
   right: 0;
   margin-top: 3px;
   border-radius: 8px;
+  position: absolute;
+  width: fit-content;
 }
 
 .item {
   color: var(--color-black);
-  padding: 8px;
+  padding: 4px 8px;
   cursor: pointer;
   user-select: none;
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: 1px solid #c4c4c4;
   display: flex;
-  opacity: 0.8;
+  gap: 10px;
+  align-items: center;
 
-  span {
-    font-size: 22px;
-    margin-right: 10px;
+  .language {
+    font-size: 12px;
   }
 
-  img {
-    margin-right: 10px;
+  .visible {
+    opacity: 1;
+  }
+
+  .invisible {
+    opacity: 0;
   }
 }
 
 .item:last-child {
   border-bottom: none;
-}
-
-.item:hover {
-  border: 1px solid var(--color-black);
-  opacity: 1;
 }
 
 .selectHide {

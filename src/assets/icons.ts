@@ -17,6 +17,7 @@ import Menu from "./icons/menu.svg"
 import Close from "./icons/close.svg"
 import FlagVi from "./icons/flag-vi.svg"
 import FlagEn from "./icons/flag-en.svg"
+import Checked from "./icons/check.svg"
 
 export const icons = {
   ArrowRightWhiteIcon,
@@ -38,4 +39,5 @@ export const icons = {
   Close,
   FlagVi,
   FlagEn,
+  Checked,
 }
