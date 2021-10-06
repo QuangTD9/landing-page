@@ -56,6 +56,10 @@ export default defineComponent({
   background-position: center;
   height: 30px;
   width: 30px;
+  z-index: 9999;
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 .swiper-button-prev {
@@ -65,6 +69,9 @@ export default defineComponent({
   background-position: center;
   height: 30px;
   width: 30px;
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
 }
 
 .swiper-button-disabled {
