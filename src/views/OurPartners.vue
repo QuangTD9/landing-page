@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { icons } from "@/assets/icons"
-import LogoSlider from "@/components/blocks/OurGames/LogoSlider.vue"
+import LogoSlider from "@/components/blocks/OurPartners/LogoSlider.vue"
 import { defineComponent } from "vue"
 
 export default defineComponent({

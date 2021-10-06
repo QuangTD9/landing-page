@@ -54,6 +54,8 @@ export default defineComponent({
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  height: 30px;
+  width: 30px;
 }
 
 .swiper-button-prev {
@@ -61,6 +63,8 @@ export default defineComponent({
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  height: 30px;
+  width: 30px;
 }
 
 .swiper-button-disabled {
