@@ -169,11 +169,20 @@ export default defineComponent({
           font-size: $FontSizeM;
           margin-bottom: $SpacingS;
         }
+      }
+    }
+  }
 
-        // .t-description {
-        //   align-items: flex-end;
-        //   color: var(--color-white);
-        // }
+  @include responsive(tablet) {
+    .container {
+      .card-text {
+        .t-title {
+          font-size: $FontSizeS;
+        }
+
+        .t-description {
+          font-size: 12px;
+        }
       }
     }
   }
