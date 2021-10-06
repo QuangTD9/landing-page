@@ -58,7 +58,7 @@ export default defineComponent({
   width: 30px;
   z-index: 9999;
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 50%;
 }
 
@@ -72,6 +72,7 @@ export default defineComponent({
   z-index: 9999;
   position: absolute;
   top: 50%;
+  left: 20px;
 }
 
 .swiper-button-disabled {
