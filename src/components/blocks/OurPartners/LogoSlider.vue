@@ -60,6 +60,7 @@ export default defineComponent({
   position: absolute;
   right: 20px;
   top: 50%;
+  cursor: pointer;
 }
 
 .swiper-button-prev {
@@ -73,6 +74,13 @@ export default defineComponent({
   position: absolute;
   top: 50%;
   left: 20px;
+  cursor: pointer;
+}
+
+.swiper-container {
+  img {
+    cursor: pointer;
+  }
 }
 
 .swiper-button-disabled {

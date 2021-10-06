@@ -94,6 +94,11 @@
     position: absolute;
     width: 100%;
     box-sizing: border-box;
+
+    .logo {
+      z-index: 2;
+      cursor: pointer;
+    }
   }
 
   @include responsive(desktop-1280) {

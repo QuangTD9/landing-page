@@ -1,7 +1,7 @@
 <template>
   <section class="header">
     <div class="menu">
-      <img :src="Logo" alt="logo" />
+      <img class="logo" :src="Logo" alt="logo" />
       <menu-header />
     </div>
     <div class="header-container">
