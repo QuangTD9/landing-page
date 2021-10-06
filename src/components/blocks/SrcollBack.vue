@@ -47,6 +47,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/styles/mixins.scss";
 @keyframes arrowTop {
   from {
     transform: rotate(180deg);
@@ -84,6 +85,12 @@ export default defineComponent({
   .arrow-top {
     transition: var(--speed-card-animation);
     transform: rotate(180deg);
+  }
+
+  @include responsive(tablet) {
+    right: 3rem;
+    width: 40px;
+    height: 40px;
   }
 }
 </style>
